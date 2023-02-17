@@ -23,9 +23,11 @@
     <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
 
     <!-- Uncomment this to disable session persistence across Tomcat restarts -->
-    <!--
-    <Manager pathname="" />
-    -->
+
+	
+    <Manager pathname="" /> <!--톰캣 삭제 후에서 세션 삭제 안되도록 만드는 것--> 
+    
+    <!-- 밑에 코드 없으면 db연결 못함. -->
     <Resource
     	name="jdbc/oracle"
     	auth="Container"
